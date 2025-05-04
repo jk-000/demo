@@ -1,0 +1,121 @@
+/* Card.css */
+
+/* Set the background color for the entire body */
+body {
+  background-color: #e9e9e9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Grid container for movie cards */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Movie card link styling */
+.movie-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Individual movie card */
+.movie-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+/* Larger box-shadow on hover */
+.movie-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Movie image container */
+.movie-image {
+  flex-shrink: 0;
+  height: 390px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Movie image inside the card */
+.movie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom in image on hover */
+.movie-card:hover .movie-image img {
+  transform: scale(1.1);
+}
+
+/* Movie title styling */
+.movie-title {
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* Heading 1 styling */
+h1 {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 100px auto 0px auto;
+  color: #333333;
+}
+
+/* Media query for responsive design */
+@media (max-width: 1200px) {
+  .movies-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .movie-image {
+    flex-shrink: 0;
+    height: 290px;
+    overflow: hidden;
+    position: relative;
+  }
+
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .movie-image {
+    flex-shrink: 0;
+    height: 290px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  h1 {
+    padding: 20px;
+    max-width: 1200px;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0px auto 0px auto;
+    color: #333333;
+  }
+  
+}

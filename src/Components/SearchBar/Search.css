@@ -1,0 +1,37 @@
+.searchbar {
+  margin: 8vh 0 0 0;
+  text-align: right;
+  position: absolute;
+  right: 12%;
+}
+
+.searchbar input {
+  padding: 15px;
+  height: 5.5vh;
+  border-radius: 5px;
+  width: 15vw;
+  border: 2px solid rgba(47, 47, 47, 0.717);
+}
+
+@media (max-width: 768px) {
+  .searchbar {
+    margin: 0;
+    text-align: right;
+    position: relative;
+    right: 0;
+    margin-top: 100px;
+    margin-right: 20px;
+  }
+
+  .searchbar input {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    height: 5vh;
+    border-radius: 5px;
+    width: calc(100% - 30px);
+    max-width: 220px;
+    border: 2px solid rgba(47, 47, 47, 0.717);
+  }
+}
