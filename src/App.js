@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // <-- Add useEffect here
 import { Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./Components/store";
@@ -17,7 +17,20 @@ import Desclaimer from "./Components/DMCA/Desclaimer";
 import LoadingBar from "react-top-loading-bar";
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState(""); // Initialize searchTerm state
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // 🔁 Redirect if domain is jkhub.site
+  useEffect(() => {
+    const hostname = window.location.hostname;
+    if (hostname === "jkhub.site" || hostname === "www.jkhub.site") {
+      const newUrl =
+        "https://jkhubmovies.site" +
+        window.location.pathname +
+        window.location.search +
+        window.location.hash;
+      window.location.replace(newUrl);
+    }
+  }, []);
 
   return (
     <Provider store={store}>
