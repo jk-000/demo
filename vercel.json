@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://jkhubmovies.site/$1",
-      "permanent": true
-    }
-  ]
-}
